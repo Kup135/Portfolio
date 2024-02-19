@@ -1,11 +1,62 @@
+:root{
+	--color-accent:#42636b;
+}
+
 body {
     font: 100%/1.5 system-ui;
+	max-width: 100%;
+	margin-inline: 100px;
+	padding: 5em;
 }
-label, input, textarea, button {
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.1;
+	text-wrap: balance;
+}
+h1{
+	font-size: 400%;
+}
+h2{
+	font-size: 80%;
+}
+li, ul{
+	display: contents;
+	}
+nav{
+
+	display: flex;
+	border-bottom: 1px solid oklch(80% 3% 200);
+	margin-bottom: 70px;
+}
+.current{
+	border-bottom: 0.2em solid oklch(90% 3% 200);
+} 
+a{
+	flex: 1;
+	text-decoration: none;
+	color: inherit;
+	text-align: center;
+	padding: 0.5em;
+}
+a:hover{
+	border-bottom: 0.2em solid var(--color-accent);
+}
+#label, input, textarea, button {
 	/* Make these elements behave like block elements,
 	   i.e. create line breaks before and after
 	 */
 	display: block;
+	font: inherit;
+}
+form, label{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1em;
+	align-items: first baseline;
+}
+button{
+	margin-top: 20px;
+	max-width: 5em;
+	align-items: center;
 }
 
 label {
@@ -24,4 +75,20 @@ input, textarea {
 
 	/* Use the same font and font metrics as the rest of the page */
 	font: inherit;
+}
+img {
+	max-width: 100%;
+}
+.projects{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+	gap: 0.5em;
+}
+article{
+	display: grid;
+	grid-template-rows: subgrid;
+	grid-row: span 3;
+	h2 {
+		margin: 0;
+	}
 }
