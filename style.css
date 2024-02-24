@@ -81,7 +81,7 @@ input, textarea {
 	font: inherit;
 }
 img {
-	max-width: 250px;
+	max-width: 100%;
 }
 .projects{
 	display: grid;
