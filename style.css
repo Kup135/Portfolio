@@ -5,7 +5,7 @@
 body {
     font: 100%/1.5 system-ui;
 	max-width: 100%;
-	margin-inline: 100px;
+	margin-inline: 30px;
 	padding: 5em;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -21,25 +21,29 @@ h2{
 li, ul{
 	display: contents;
 	}
+caption{
+	text-align: left;
+}
 nav{
 
 	display: flex;
 	border-bottom: 1px solid oklch(80% 3% 200);
 	margin-bottom: 70px;
+	a{
+		flex: 1;
+		text-decoration: none;
+		color: inherit;
+		text-align: center;
+		padding: 0.5em;
+	}
+	a:hover{
+		border-bottom: 0.2em solid var(--color-accent);
+	}
 }
 .current{
 	border-bottom: 0.2em solid oklch(90% 3% 200);
 } 
-a{
-	flex: 1;
-	text-decoration: none;
-	color: inherit;
-	text-align: center;
-	padding: 0.5em;
-}
-a:hover{
-	border-bottom: 0.2em solid var(--color-accent);
-}
+
 #label, input, textarea, button {
 	/* Make these elements behave like block elements,
 	   i.e. create line breaks before and after

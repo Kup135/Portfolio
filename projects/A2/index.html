@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 Assignment</title>
+    <link href="/../style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+<body>
+    <nav class="crumbs">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html" class="current">Projects</a></li>
+            <li><a href="../CV/index.html">CV</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+        </ul>
+        </nav>
+        <!DOCTYPE HTML>
+        <html lang="en">
+        <body>
+            <header>
+                <h1>
+                    <small>Assignment 2</small>
+                    Exploratory Data Analysis
+                </h1>
+        
+                <p>
+                    <strong>Adi Kupershmidt</strong> — <em>adi_kup@mit.edu</em>
+                </p>
+            </header>
+            <main>
+                <section>
+                    <h2>Subtheme: Speculation</h2>
+        
+                    <h3>Overall Analysis Questions</h3>
+                    <ol>
+                        <li><h4>1. What prominent trends in house flipping have occurred over the past twenty years? Can they be traced back to specific policy or regulations?</h4>
+                        <p>In the final part of the "Homes for Profit: Speculation and Investment in Greater Boston" report, MAPC are recommending some policies and planning startegies to ammeliorate 
+                            the residential replacement and gentrification caused by speculating investors. I think it will be interesting to look at flipping housing trends throughout the last two decades,
+                            and learn how they were influenced by policy changes, so that we can better understnad how to make more impactful policy in the future. </p></li>
+
+                        <li><h4>2. What sort of housing properties are predominantly targeted by flippers?</h4>
+                        <p>I wonder if there are specific properties that are more proned to be targeted by speculative investment. A real estate agent from Boston that I met before
+                            moving into on-campus housing, told me of numerous "flipping" projects he was working on. Most of them were multi-family houses. I wonder if we could map 
+                            the properties that "flippers" are looking for, perhaps we can better regulate those specific markets.
+                        </p></li>
+                        <li><h4>3. Who are the main investors in house flipping around Boston?</h4>
+                        <p>Reading Pro Publica's article by Heather Vogell, I was astounded by the influx of private equity firms investing in multifamily apartments. I always thought 
+                            huge corporates won't invest in speculating over such small ventures (such as a single lot real estate investment). I wonder if the dataset will reflect that 
+                            as well - who are the main stakeholders investing in "flipping" and can they be identified and traced to few dominant players?
+                        </p></li>
+                        <li><h4>4. Where are the largest concentrations of flipped housing ventures in the Greater Boston area?</h4>
+                        <p>Lastly, I think it's useful to understand where most real-estate speculations take place. By identifying clusters of house flipping, we can later target policies
+                            and planning strategies at specific parts of the metropolis.
+                        </p></li>
+                    </ol>
+                </section>
+        
+                <section>
+                    <h2>Discoveries & Insights</h2>
+        
+                    <figure>
+                        <img src="Graphs/Assets_flipping.png" alt="" />
+                        <figcaption>
+                        Flipped Properties in greater Boston 2000-2022
+                        </figcaption>
+                        <p><caption>When I started answering this question, I filtered the data to include only “flipped” assets.It seemed like an outlier was 
+                            skewing the data around 2006, looking at the last sale average prices. Looking into it, I found this was actually a major affordable 
+                            housing project (<a href="https://www.bostonhousing.org/en/Departments/Planning-and-Real-Estate-Development/Mixed-Finance-Development/Franklin-Hill.aspx">Franklin Hill</a>) by Boston 
+                            Housing Authority in collaboration with a private partner. Apparently, they were “flipping” an old public housing development. 
+
+                            In order to narrow down the dataset and focus on the housing crisis, I added the following filters:
+                            <ol>
+                                <li>Geographic - I focused only on the area the included flipped assets, cleaning some outliers with obscure coordinated</li>
+                                <li>Usage - I limited the usage to housing usages: residential / apartments / condominums</li>
+                                <li>Current Owner - I filtered out the houses with owners who did the flipping for their own benefit, thinking some of them may be locals that renovated an old property for their own use. This way, there’s a better chance
+                                     those properties have been flipped for profit and therefore pose a greater risk for land speculation and gentrification. </li>
+                            </ol>
+                             </caption></p>
+                    </figure>
+        
+                    <figure>
+                        <img src="Graphs/Only Housing.png" alt="" />
+                        <figcaption>
+                        Flipped Housing Properties in greater Boston 2000-2022
+                        </figcaption>
+                        <p><caption> Around 2011-2016 housing flipping became more popular, and more profitable (which might explain its popularity). We can see the number of instances (count) of flipped houses 
+                            started spiking in 2010-2011, along with a general rise of the selling prices. 
+                            However, around 2016 the amount of flipping ventures is starting to decrease. The differences in selling prices vs. last sale prices of properties, which can indicate as to the amount 
+                            of profit gained by flippers, is somewhat more erratic. Yet, that too is currently showing an overall decline starting at 2016. 
+                            We can see this trend backed up by some on-the-ground postings from local Boston residents on  
+                            <a href="//www.reddit.com/r/RealEstate/comments/5q3vmx/fthb_dealing_with_terrible_flipper_trend_in_the/">reddit</a>).</caption></p> 
+                            <p>Can It be due to rising popularity of HGTV, 
+                                CNBC initiative of house flipping reality TV series starting 2012, or <a href="https://www.imdb.com/title/tt2201533/">"Flipping Boston"</a> show, which aired 2012-2014 and featured “two opinionated 
+                                flippers as they solve issues they discover while renovating”?  <a href="https://www.boston.com/real-estate/home-improvement/2018/06/15/for-house-flippers-reality-meets-reality-tv/">This article</a> suggests so. </p>
+
+                                <p>But perhaps it’s more rooted in the change in US Department of Housing and Urban Development policy. Regulations regarding predatory flipping by the FHA initiated in 2006, were greatly relaxed in January 2010 (Wikipedia). 
+                                </p>
+                    </figure>
+        
+                    <figure>
+                        <img src="Graphs/types of properties.png" alt="" />
+                        <figcaption>
+                        Types of Flipped Properties 
+                        </figcaption>
+                        <p><caption>We can see investors are primarily interested in selling condominiums, with a median of 2 bedrooms in a flat. An example for a policy to withhold this kind of
+                            conversion can be to limit the holding of 2 bedrooms apartments before reselling, to less than the average time it takes to refubrish it.
+                        </caption></p>
+                    </figure>
+        
+                    <figure>
+                        <img src="Graphs/Yearbuilt.jpg" alt="" />
+                        <figcaption>
+                        Flipped Houses: Year Built and Bedrooms num.
+                        </figcaption>
+                        <p><caption>I tried looking whether buildings from certain years are more susceptible to be targeted by flippers. However, it seems like the flipped units sold are in correlation to the overall units sold from 
+                            certain years so it’s hard to tell whether flippers have a preference for buildings from a specific period. However, there is a pretty clear cut in 1850, suggeting buildings that are old enough aren't at risk 
+                            of being targeted for flipping. It also seems like buildings from earlier period are being refubrished as a whole, considering the larger number of bedrooms. 7-12 bedrooms indicate a property that was perhaps bought by one
+                            investor, but then split into multiple flats.</caption></p>
+                    </figure>
+        
+                    <figure>
+                        <img src="Graphs/Investors_bldg.png" alt="" />
+                        <figcaption>
+                        Investors in Flipping Ventures by Type and Building Sector Affiliation
+                        </figcaption>
+                        <p><caption>I was very surprised to find out that the vast majority of flipping projects are not making a profit, and are coming from the non-building sector. It makes me think that perhaps this isn’t 
+                            a systematic phenomenon of large corporates and building developers, but rather a grassroots trend by independent investors.</caption></p>
+                    </figure>
+        
+                    <figure>
+                        <img src="Graphs/map.png" alt="" />
+                        <figcaption>
+                        Primary Concentrations of Flipped Housing
+                        </figcaption>
+                        <p><caption>All of the flipped houses are concentrated around Boston city center. The neighborhoods that have seen the largest quantities 
+                            of flipping housing ventures in the past decades are: Back Bay, North End, Beacon Hill, and South End. </caption></p>
+                    </figure>
+        
+                
+                </section>
+        
+                <section>
+                    <h2>Summary</h2>
+                    <p>From this preliminary data exploration, I think we can identify some main characteristics of properties that are prone to be targeted by real estate speculators. Some of them are: location, a relatively 
+                      big number of bedrooms, and recent building years. Moreover, the main sector investing in flipping seems to be small independent investors. This is surprising, especially in light 
+                      of the article by Heather Vogell, showing private equity enterprises were responsible for most of it. I think further research is needed to fully understand this descrepency and the way previous
+                      federal policies may have effected the flipping housing market in 2010 (if they did at all), as well as what has stopped the rise of flipping in 2016.
+                    </p>
+                </section>
+            </main>
+        </body>
+        </html>
+        
+</body>
+</html>
+
