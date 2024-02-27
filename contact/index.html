@@ -5,27 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link href="../style.css" rel="stylesheet" />
+    <script type="module" src="../global.js"></script>
 </head>
 <body>
-    <nav class="crumbs">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../projects/index.html">Projects</a></li>
-            <li><a href="../CV/index.html">CV</a></li>
-            <li><a href="index.html" class="current">Contact</a></li>
-        </ul>
-        </nav>
     <h1>Contact</h1>
     <form action="mailto:adi_kup@mit.edu"
-        method="Post"
-        enctype="text/plain"
-        <label for="email">Your Email</label>
-        <input type="email" name="email" </input>
+        method="GET">
+        <label for="email" >Your Email</label>
+        <input type="email" id="email" name="email"> </input>
         <label for="subject">Subject</label>
-        <input name="subject" </input>
+        <input name="subject" id="subject"> </input>
         <label for="body">Your message here:</label>
         <textarea name="body"></textarea> 
-        <button class="buttons" type="button">Submit</button>
+        <button class="buttons" type="submit" is="submit">Submit</button>
     </form>
 </body>
 </html>

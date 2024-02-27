@@ -1,5 +1,6 @@
 :root{
 	--color-accent:#42636b;
+	color-scheme: light dark;
 }
 
 body {
@@ -27,7 +28,8 @@ caption{
 nav{
 
 	display: flex;
-	border-bottom: 1px solid oklch(80% 3% 200);
+	--border-color: oklch(50% 10% 200 / 40%);
+	border-bottom: 1px solid var(--border-color);
 	margin-bottom: 70px;
 	a{
 		flex: 1;
@@ -39,12 +41,19 @@ nav{
 	a:hover{
 		border-bottom: 0.2em solid var(--color-accent);
 	}
+	a.current{
+		border-bottom: 0.2em solid var(--border-color);
+	} 
 }
-.current{
-	border-bottom: 0.2em solid oklch(90% 3% 200);
-} 
+.color-scheme{
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font: inherit 80%;
+	
+}
 
-#label, input, textarea, button {
+label, input, textarea, button {
 	/* Make these elements behave like block elements,
 	   i.e. create line breaks before and after
 	 */
@@ -81,11 +90,11 @@ input, textarea {
 	font: inherit;
 }
 img {
-	max-width: 250px;
+	max-width: 100%;
 }
 .projects{
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(7em, 0.5fr));
 	gap: 0.5em;
 }
 article{
@@ -94,5 +103,8 @@ article{
 	grid-row: span 3;
 	h2 {
 		margin: 0;
+	}
+	img{
+		max-width: 100%;
 	}
 }
