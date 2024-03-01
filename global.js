@@ -22,9 +22,9 @@ if (localStorage.colorScheme){
 
 let pages = [
     {url: "", title: "Home"},
-    {url: "projects/", title: "Projects"},
-    {url: "CV/", title: "CV"},
-    {url: "contact/", title: "Contact"},
+    {url: "/projects/", title: "Projects"},
+    {url: "/CV/", title: "CV"},
+    {url: "/contact/", title: "Contact"},
     {url: "https://github.com/Kup135", title: "My GitHub"},
 ];
 
