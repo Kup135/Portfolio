@@ -1,0 +1,106 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 4</small>
+			Persuasive or Deceptive Visualization?
+		</h1>
+
+		<p>
+			<strong>Adi Kupershmidt</strong> — <em>adi_kup@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+    <h2>Proposition: Inadequate Abortions Care Makes Women Travel Across States</h2>
+
+		<section>
+      <h3>FOR the Proposition</h3>
+
+      <figure>
+				<img src="images/inadequate.png" alt="" style="max-width: 100%;"/>
+				<figcaption>
+					In this dashboard we can see the scarcity of abortions cliniques across the US, and the considerate negative "migration" (out of state travel) of women seeking abortions care. 
+                    This is a clear indication of the need for more abortion care facilities (and legal fascilitation..) in many states across the US.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>I decided to use the difference between abortions by state of occurance and abortions by state of residency to find patterns of abortion migration across the US, and show how some 
+                    states are more "importing" than "exporting" abortions. I used a map to show the states and their "migration" status. It's not completely earnest, because I think it could be more earnest 
+                    if it was weighed by population and not absolute numbers that are a little misleading on a map. [1]
+                </li>
+				<li>In the map showing counties with no abortion provider, I used the data as is to show the scarcity. I think it's quite neurtal, although perhaps could have benefited from a weighted average 
+                    or from incorporating more data into the index, such as known abortions cliniques. [0.5]
+                </li>
+				<li>I used neutral "scientific" colors, blues and greys, red-blue scale for negative-positive, to induce a feeling of trust [2]. I tried using different, more saturated colors but found them
+                    to be less formal and therefore less "serious" and "trustworthy".
+                </li>
+			</ul>
+    </section>
+
+    <section>
+      <h3>AGAINST the Proposition</h3>
+
+      <figure>
+				<img src="images/Adequate.png" alt="" style="max-width: 100%;"/>
+				<figcaption>
+          In the dashboard we can see that the number of abortions in the US per capita is not significantly different between states. Moreover, it shows that there's an adequate number of abortions services 
+            in most states, and that the "migration" is minute if it exists at all. The probable cause for the absolute low numbers of abortions in some states is the low population or the low demand, 
+            and not the lack of services or the legislation.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>For the visualization showing that investment in abortions services doesn't effect abortions' rates I used 
+                    only federal expenditures and not the total public expenditure (which would have shown how public spending indeed fascilitates more abortions - like in California). 
+                    I also used the number of abortions in girls 15 and younger, which are probably very severe cases and for that reason they rely on federal funding. It is also not normalized
+                    by population. [-2]
+                </li>
+				<li>For the bar chart showing the number of abortions for residents and that occured in the state, I added a line showing the average between the two - to imply there's hardly any difference
+                    between the two values. If there's no difference, it implies that the same women who need abortions are getting them in their state. [-2]</li>
+                <li>I used a similar dataset to show the same idea in a scatterplot, only in absolute numbers instead of per capita (showing twice almost the same data as if it's essentialy different 
+                    and provides additional evidence). [-1]</li>
+                <li>I added a linear trend line to indicate a perfect correlation between the number of women seeking abortion (residents) and the supply (occurances in state).
+                    The zoom out and inclusion of outliers like California and New York made it seem like this is a linear trend, ignoring states with scarcity of abortion services and with 99% of women needing 
+                    to travel out-of-state to seek care. [-1.5]</li>
+                </li>
+				<li>Again, I used neutral "scientific" colors, blues and greys, to induce a feeling of trust [-2]. I tried using different, more saturated colors but found them
+                    to be less formal and therefore less "serious" and "trustworthy".</li>
+			</ul>
+    </section>
+
+    <section>
+      <h2>Final Reflection</h2>
+
+      <p>I enjoyed this assignment, I think it was a really good opportunity to think about biases and how elastic data can be in the hands of professionals. It was really hard for me to find a proposition. 
+        For once, I had to spend a lot of time diving into the different kinds of datasets and very distinctive fields of knowledge, before I decided to go with this one. So it was a bit overwhelming the amount of
+        different datasets we were exposed to and the variation of years, measuremnets and scales in each of them. 
+      </p>
+      <p>
+        I think once I realized the potential for a proposition that I can argue for and against, I was a lot more comfortable visualizing the different arguments relying on the data. 
+      </p>
+      <p>
+        I was surprised to find out how easy it is to mislead with data, when you have a clear agenda and an intimate acquaintance with the data. I am sure that in the hands of someone more literate and experiences, this 
+        could have been a lot more convincing / misleading. I think it's also really interesting to witness how conviction and deception are just two sides of the same coin, especially when it comes to design choices. 
+        Wrangling the data in a misleading felt way more problematic then choosing a "trustworthy" color scheme, for example.
+      </p>
+    </section>
+	</main>
+</body>
+</html>
